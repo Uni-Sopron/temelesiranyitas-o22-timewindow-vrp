@@ -1,307 +1,319 @@
 Problem:    vrptw
-Rows:       148
+Rows:       154
 Columns:    147 (126 integer, 126 binary)
-Non-zeros:  921
+Non-zeros:  1029
 Status:     INTEGER OPTIMAL
 Objective:  Distance = 715 (MINimum)
 
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
-     1 ServeAllOnlyOnce[1]
+     1 ServeAllOnlyOnce1[1]
                                    1             1             = 
-     2 ServeAllOnlyOnce[2]
+     2 ServeAllOnlyOnce1[2]
                                    1             1             = 
-     3 ServeAllOnlyOnce[3]
+     3 ServeAllOnlyOnce1[3]
                                    1             1             = 
-     4 ServeAllOnlyOnce[4]
+     4 ServeAllOnlyOnce1[4]
                                    1             1             = 
-     5 ServeAllOnlyOnce[5]
+     5 ServeAllOnlyOnce1[5]
                                    1             1             = 
-     6 ServeAllOnlyOnce[6]
+     6 ServeAllOnlyOnce1[6]
                                    1             1             = 
-     7 LeaveDepot[1]
-                                   1                           1 
-     8 LeaveDepot[2]
-                                   1                           1 
-     9 LeaveDepot[3]
-                                   1                           1 
-    10 ArriveAtDepot[1]
-                                   1                           1 
-    11 ArriveAtDepot[2]
-                                   1                           1 
-    12 ArriveAtDepot[3]
-                                   1                           1 
-    13 EnsureFlow[1,1]
+     7 ServeAllOnlyOnce2[1]
+                                   1             1             = 
+     8 ServeAllOnlyOnce2[2]
+                                   1             1             = 
+     9 ServeAllOnlyOnce2[3]
+                                   1             1             = 
+    10 ServeAllOnlyOnce2[4]
+                                   1             1             = 
+    11 ServeAllOnlyOnce2[5]
+                                   1             1             = 
+    12 ServeAllOnlyOnce2[6]
+                                   1             1             = 
+    13 LeaveDepot[1]
+                                   1             1             = 
+    14 LeaveDepot[2]
+                                   1             1             = 
+    15 LeaveDepot[3]
+                                   1             1             = 
+    16 ArriveAtDepot[1]
+                                   1             1             = 
+    17 ArriveAtDepot[2]
+                                   1             1             = 
+    18 ArriveAtDepot[3]
+                                   1             1             = 
+    19 EnsureFlow[1,1]
                                    0            -0             = 
-    14 EnsureFlow[1,2]
+    20 EnsureFlow[1,2]
                                    0            -0             = 
-    15 EnsureFlow[1,3]
+    21 EnsureFlow[1,3]
                                    0            -0             = 
-    16 EnsureFlow[2,1]
+    22 EnsureFlow[2,1]
                                    0            -0             = 
-    17 EnsureFlow[2,2]
+    23 EnsureFlow[2,2]
                                    0            -0             = 
-    18 EnsureFlow[2,3]
+    24 EnsureFlow[2,3]
                                    0            -0             = 
-    19 EnsureFlow[3,1]
+    25 EnsureFlow[3,1]
                                    0            -0             = 
-    20 EnsureFlow[3,2]
+    26 EnsureFlow[3,2]
                                    0            -0             = 
-    21 EnsureFlow[3,3]
+    27 EnsureFlow[3,3]
                                    0            -0             = 
-    22 EnsureFlow[4,1]
+    28 EnsureFlow[4,1]
                                    0            -0             = 
-    23 EnsureFlow[4,2]
+    29 EnsureFlow[4,2]
                                    0            -0             = 
-    24 EnsureFlow[4,3]
+    30 EnsureFlow[4,3]
                                    0            -0             = 
-    25 EnsureFlow[5,1]
+    31 EnsureFlow[5,1]
                                    0            -0             = 
-    26 EnsureFlow[5,2]
+    32 EnsureFlow[5,2]
                                    0            -0             = 
-    27 EnsureFlow[5,3]
+    33 EnsureFlow[5,3]
                                    0            -0             = 
-    28 EnsureFlow[6,1]
+    34 EnsureFlow[6,1]
                                    0            -0             = 
-    29 EnsureFlow[6,2]
+    35 EnsureFlow[6,2]
                                    0            -0             = 
-    30 EnsureFlow[6,3]
+    36 EnsureFlow[6,3]
                                    0            -0             = 
-    31 EnsureFlow[0,1]
+    37 EnsureFlow[0,1]
                                    0            -0             = 
-    32 EnsureFlow[0,2]
+    38 EnsureFlow[0,2]
                                    0            -0             = 
-    33 EnsureFlow[0,3]
+    39 EnsureFlow[0,3]
                                    0            -0             = 
-    34 CapacityConstraint[1]
+    40 CapacityConstraint[1]
                                   25                          40 
-    35 CapacityConstraint[2]
+    41 CapacityConstraint[2]
                                   50                          50 
-    36 CapacityConstraint[3]
+    42 CapacityConstraint[3]
                                   90                         100 
-    37 CalcElapsedTimeWHenRouteTaken[1,1,2]
+    43 CalcElapsedTimeWhenRouteTaken[1,1,2]
                                  -60                       99859 
-    38 CalcElapsedTimeWHenRouteTaken[1,1,3]
+    44 CalcElapsedTimeWhenRouteTaken[1,1,3]
                                  -50                       99839 
-    39 CalcElapsedTimeWHenRouteTaken[1,1,4]
+    45 CalcElapsedTimeWhenRouteTaken[1,1,4]
                                  -80                       99894 
-    40 CalcElapsedTimeWHenRouteTaken[1,1,5]
+    46 CalcElapsedTimeWhenRouteTaken[1,1,5]
                                 -180                       99879 
-    41 CalcElapsedTimeWHenRouteTaken[1,1,6]
+    47 CalcElapsedTimeWhenRouteTaken[1,1,6]
                                 -115                       99899 
-    42 CalcElapsedTimeWHenRouteTaken[1,2,1]
+    48 CalcElapsedTimeWhenRouteTaken[1,2,1]
                                   60                       99863 
-    43 CalcElapsedTimeWHenRouteTaken[1,2,3]
+    49 CalcElapsedTimeWhenRouteTaken[1,2,3]
                                   10                       99828 
-    44 CalcElapsedTimeWHenRouteTaken[1,2,4]
+    50 CalcElapsedTimeWhenRouteTaken[1,2,4]
                                  -20                       99908 
-    45 CalcElapsedTimeWHenRouteTaken[1,2,5]
+    51 CalcElapsedTimeWhenRouteTaken[1,2,5]
                                 -120                       99848 
-    46 CalcElapsedTimeWHenRouteTaken[1,2,6]
+    52 CalcElapsedTimeWhenRouteTaken[1,2,6]
                                  -55                       99878 
-    47 CalcElapsedTimeWHenRouteTaken[1,3,1]
+    53 CalcElapsedTimeWhenRouteTaken[1,3,1]
                                   50                       99842 
-    48 CalcElapsedTimeWHenRouteTaken[1,3,2]
+    54 CalcElapsedTimeWhenRouteTaken[1,3,2]
                                  -10                       99827 
-    49 CalcElapsedTimeWHenRouteTaken[1,3,4]
+    55 CalcElapsedTimeWhenRouteTaken[1,3,4]
                                  -30                       99927 
-    50 CalcElapsedTimeWHenRouteTaken[1,3,5]
+    56 CalcElapsedTimeWhenRouteTaken[1,3,5]
                                 -130                       99947 
-    51 CalcElapsedTimeWHenRouteTaken[1,3,6]
+    57 CalcElapsedTimeWhenRouteTaken[1,3,6]
                                  -65                       99957 
-    52 CalcElapsedTimeWHenRouteTaken[1,4,1]
+    58 CalcElapsedTimeWhenRouteTaken[1,4,1]
                                   80                       99896 
-    53 CalcElapsedTimeWHenRouteTaken[1,4,2]
+    59 CalcElapsedTimeWhenRouteTaken[1,4,2]
                                   20                       99906 
-    54 CalcElapsedTimeWHenRouteTaken[1,4,3]
+    60 CalcElapsedTimeWhenRouteTaken[1,4,3]
                                   30                       99926 
-    55 CalcElapsedTimeWHenRouteTaken[1,4,5]
+    61 CalcElapsedTimeWhenRouteTaken[1,4,5]
                                 -100                       99931 
-    56 CalcElapsedTimeWHenRouteTaken[1,4,6]
+    62 CalcElapsedTimeWhenRouteTaken[1,4,6]
                                  -35                       99966 
-    57 CalcElapsedTimeWHenRouteTaken[1,5,1]
+    63 CalcElapsedTimeWhenRouteTaken[1,5,1]
                                  180                       99885 
-    58 CalcElapsedTimeWHenRouteTaken[1,5,2]
+    64 CalcElapsedTimeWhenRouteTaken[1,5,2]
                                  120                       99850 
-    59 CalcElapsedTimeWHenRouteTaken[1,5,3]
+    65 CalcElapsedTimeWhenRouteTaken[1,5,3]
                                  130                       99950 
-    60 CalcElapsedTimeWHenRouteTaken[1,5,4]
+    66 CalcElapsedTimeWhenRouteTaken[1,5,4]
                                  100                       99935 
-    61 CalcElapsedTimeWHenRouteTaken[1,5,6]
+    67 CalcElapsedTimeWhenRouteTaken[1,5,6]
                                   65                       99870 
-    62 CalcElapsedTimeWHenRouteTaken[1,6,1]
+    68 CalcElapsedTimeWhenRouteTaken[1,6,1]
                                  115                       99906 
-    63 CalcElapsedTimeWHenRouteTaken[1,6,2]
+    69 CalcElapsedTimeWhenRouteTaken[1,6,2]
                                   55                       99881 
-    64 CalcElapsedTimeWHenRouteTaken[1,6,3]
+    70 CalcElapsedTimeWhenRouteTaken[1,6,3]
                                   65                       99961 
-    65 CalcElapsedTimeWHenRouteTaken[1,6,4]
+    71 CalcElapsedTimeWhenRouteTaken[1,6,4]
                                   35                       99971 
-    66 CalcElapsedTimeWHenRouteTaken[1,6,5]
+    72 CalcElapsedTimeWhenRouteTaken[1,6,5]
                                  -65                       99871 
-    67 CalcElapsedTimeWHenRouteTaken[2,1,2]
+    73 CalcElapsedTimeWhenRouteTaken[2,1,2]
                                  -60                       99859 
-    68 CalcElapsedTimeWHenRouteTaken[2,1,3]
+    74 CalcElapsedTimeWhenRouteTaken[2,1,3]
                                  -50                       99839 
-    69 CalcElapsedTimeWHenRouteTaken[2,1,4]
+    75 CalcElapsedTimeWhenRouteTaken[2,1,4]
                                  -80                       99894 
-    70 CalcElapsedTimeWHenRouteTaken[2,1,5]
+    76 CalcElapsedTimeWhenRouteTaken[2,1,5]
                                 -180                       99879 
-    71 CalcElapsedTimeWHenRouteTaken[2,1,6]
+    77 CalcElapsedTimeWhenRouteTaken[2,1,6]
                                 -115                       99899 
-    72 CalcElapsedTimeWHenRouteTaken[2,2,1]
+    78 CalcElapsedTimeWhenRouteTaken[2,2,1]
                                   60                       99863 
-    73 CalcElapsedTimeWHenRouteTaken[2,2,3]
+    79 CalcElapsedTimeWhenRouteTaken[2,2,3]
                                   10                       99828 
-    74 CalcElapsedTimeWHenRouteTaken[2,2,4]
+    80 CalcElapsedTimeWhenRouteTaken[2,2,4]
                                  -20                       99908 
-    75 CalcElapsedTimeWHenRouteTaken[2,2,5]
+    81 CalcElapsedTimeWhenRouteTaken[2,2,5]
                                 -120                       99848 
-    76 CalcElapsedTimeWHenRouteTaken[2,2,6]
+    82 CalcElapsedTimeWhenRouteTaken[2,2,6]
                                  -55                       99878 
-    77 CalcElapsedTimeWHenRouteTaken[2,3,1]
+    83 CalcElapsedTimeWhenRouteTaken[2,3,1]
                                   50                       99842 
-    78 CalcElapsedTimeWHenRouteTaken[2,3,2]
+    84 CalcElapsedTimeWhenRouteTaken[2,3,2]
                                  -10                       99827 
-    79 CalcElapsedTimeWHenRouteTaken[2,3,4]
+    85 CalcElapsedTimeWhenRouteTaken[2,3,4]
                                  -30                       99927 
-    80 CalcElapsedTimeWHenRouteTaken[2,3,5]
+    86 CalcElapsedTimeWhenRouteTaken[2,3,5]
                                99869                       99947 
-    81 CalcElapsedTimeWHenRouteTaken[2,3,6]
+    87 CalcElapsedTimeWhenRouteTaken[2,3,6]
                                  -65                       99957 
-    82 CalcElapsedTimeWHenRouteTaken[2,4,1]
+    88 CalcElapsedTimeWhenRouteTaken[2,4,1]
                                   80                       99896 
-    83 CalcElapsedTimeWHenRouteTaken[2,4,2]
+    89 CalcElapsedTimeWhenRouteTaken[2,4,2]
                                   20                       99906 
-    84 CalcElapsedTimeWHenRouteTaken[2,4,3]
+    90 CalcElapsedTimeWhenRouteTaken[2,4,3]
                                   30                       99926 
-    85 CalcElapsedTimeWHenRouteTaken[2,4,5]
+    91 CalcElapsedTimeWhenRouteTaken[2,4,5]
                                 -100                       99931 
-    86 CalcElapsedTimeWHenRouteTaken[2,4,6]
+    92 CalcElapsedTimeWhenRouteTaken[2,4,6]
                                  -35                       99966 
-    87 CalcElapsedTimeWHenRouteTaken[2,5,1]
+    93 CalcElapsedTimeWhenRouteTaken[2,5,1]
                                  180                       99885 
-    88 CalcElapsedTimeWHenRouteTaken[2,5,2]
+    94 CalcElapsedTimeWhenRouteTaken[2,5,2]
                                  120                       99850 
-    89 CalcElapsedTimeWHenRouteTaken[2,5,3]
+    95 CalcElapsedTimeWhenRouteTaken[2,5,3]
                                  130                       99950 
-    90 CalcElapsedTimeWHenRouteTaken[2,5,4]
+    96 CalcElapsedTimeWhenRouteTaken[2,5,4]
                                  100                       99935 
-    91 CalcElapsedTimeWHenRouteTaken[2,5,6]
+    97 CalcElapsedTimeWhenRouteTaken[2,5,6]
                                   65                       99870 
-    92 CalcElapsedTimeWHenRouteTaken[2,6,1]
+    98 CalcElapsedTimeWhenRouteTaken[2,6,1]
                                  115                       99906 
-    93 CalcElapsedTimeWHenRouteTaken[2,6,2]
+    99 CalcElapsedTimeWhenRouteTaken[2,6,2]
                                   55                       99881 
-    94 CalcElapsedTimeWHenRouteTaken[2,6,3]
+   100 CalcElapsedTimeWhenRouteTaken[2,6,3]
                                   65                       99961 
-    95 CalcElapsedTimeWHenRouteTaken[2,6,4]
+   101 CalcElapsedTimeWhenRouteTaken[2,6,4]
                                   35                       99971 
-    96 CalcElapsedTimeWHenRouteTaken[2,6,5]
+   102 CalcElapsedTimeWhenRouteTaken[2,6,5]
                                  -65                       99871 
-    97 CalcElapsedTimeWHenRouteTaken[3,1,2]
+   103 CalcElapsedTimeWhenRouteTaken[3,1,2]
                                  -60                       99859 
-    98 CalcElapsedTimeWHenRouteTaken[3,1,3]
+   104 CalcElapsedTimeWhenRouteTaken[3,1,3]
                                  -50                       99839 
-    99 CalcElapsedTimeWHenRouteTaken[3,1,4]
+   105 CalcElapsedTimeWhenRouteTaken[3,1,4]
                                99894                       99894 
-   100 CalcElapsedTimeWHenRouteTaken[3,1,5]
+   106 CalcElapsedTimeWhenRouteTaken[3,1,5]
                                 -180                       99879 
-   101 CalcElapsedTimeWHenRouteTaken[3,1,6]
+   107 CalcElapsedTimeWhenRouteTaken[3,1,6]
                                 -138                       99899 
-   102 CalcElapsedTimeWHenRouteTaken[3,2,1]
+   108 CalcElapsedTimeWhenRouteTaken[3,2,1]
                                   60                       99863 
-   103 CalcElapsedTimeWHenRouteTaken[3,2,3]
+   109 CalcElapsedTimeWhenRouteTaken[3,2,3]
                                   10                       99828 
-   104 CalcElapsedTimeWHenRouteTaken[3,2,4]
+   110 CalcElapsedTimeWhenRouteTaken[3,2,4]
                                  -45                       99908 
-   105 CalcElapsedTimeWHenRouteTaken[3,2,5]
+   111 CalcElapsedTimeWhenRouteTaken[3,2,5]
                                 -120                       99848 
-   106 CalcElapsedTimeWHenRouteTaken[3,2,6]
+   112 CalcElapsedTimeWhenRouteTaken[3,2,6]
                                  -78                       99878 
-   107 CalcElapsedTimeWHenRouteTaken[3,3,1]
+   113 CalcElapsedTimeWhenRouteTaken[3,3,1]
                                   50                       99842 
-   108 CalcElapsedTimeWHenRouteTaken[3,3,2]
+   114 CalcElapsedTimeWhenRouteTaken[3,3,2]
                                  -10                       99827 
-   109 CalcElapsedTimeWHenRouteTaken[3,3,4]
+   115 CalcElapsedTimeWhenRouteTaken[3,3,4]
                                  -55                       99927 
-   110 CalcElapsedTimeWHenRouteTaken[3,3,5]
+   116 CalcElapsedTimeWhenRouteTaken[3,3,5]
                                 -130                       99947 
-   111 CalcElapsedTimeWHenRouteTaken[3,3,6]
+   117 CalcElapsedTimeWhenRouteTaken[3,3,6]
                                  -88                       99957 
-   112 CalcElapsedTimeWHenRouteTaken[3,4,1]
+   118 CalcElapsedTimeWhenRouteTaken[3,4,1]
                                  105                       99896 
-   113 CalcElapsedTimeWHenRouteTaken[3,4,2]
+   119 CalcElapsedTimeWhenRouteTaken[3,4,2]
                                   45                       99906 
-   114 CalcElapsedTimeWHenRouteTaken[3,4,3]
+   120 CalcElapsedTimeWhenRouteTaken[3,4,3]
                                   55                       99926 
-   115 CalcElapsedTimeWHenRouteTaken[3,4,5]
+   121 CalcElapsedTimeWhenRouteTaken[3,4,5]
                                  -75                       99931 
-   116 CalcElapsedTimeWHenRouteTaken[3,4,6]
+   122 CalcElapsedTimeWhenRouteTaken[3,4,6]
                                99966                       99966 
-   117 CalcElapsedTimeWHenRouteTaken[3,5,1]
+   123 CalcElapsedTimeWhenRouteTaken[3,5,1]
                                  180                       99885 
-   118 CalcElapsedTimeWHenRouteTaken[3,5,2]
+   124 CalcElapsedTimeWhenRouteTaken[3,5,2]
                                  120                       99850 
-   119 CalcElapsedTimeWHenRouteTaken[3,5,3]
+   125 CalcElapsedTimeWhenRouteTaken[3,5,3]
                                  130                       99950 
-   120 CalcElapsedTimeWHenRouteTaken[3,5,4]
+   126 CalcElapsedTimeWhenRouteTaken[3,5,4]
                                   75                       99935 
-   121 CalcElapsedTimeWHenRouteTaken[3,5,6]
+   127 CalcElapsedTimeWhenRouteTaken[3,5,6]
                                   42                       99870 
-   122 CalcElapsedTimeWHenRouteTaken[3,6,1]
+   128 CalcElapsedTimeWhenRouteTaken[3,6,1]
                                  138                       99906 
-   123 CalcElapsedTimeWHenRouteTaken[3,6,2]
+   129 CalcElapsedTimeWhenRouteTaken[3,6,2]
                                   78                       99881 
-   124 CalcElapsedTimeWHenRouteTaken[3,6,3]
+   130 CalcElapsedTimeWhenRouteTaken[3,6,3]
                                   88                       99961 
-   125 CalcElapsedTimeWHenRouteTaken[3,6,4]
+   131 CalcElapsedTimeWhenRouteTaken[3,6,4]
                                   33                       99971 
-   126 CalcElapsedTimeWHenRouteTaken[3,6,5]
+   132 CalcElapsedTimeWhenRouteTaken[3,6,5]
                                  -42                       99871 
-   127 TimeWindows[1,1]
+   133 TimeWindows[1,1]
                                   20            20           100 
-   128 TimeWindows[1,2]
+   134 TimeWindows[1,2]
                                   80            80           110 
-   129 TimeWindows[1,3]
+   135 TimeWindows[1,3]
                                   70            70            90 
-   130 TimeWindows[1,4]
+   136 TimeWindows[1,4]
                                  100           100           150 
-   131 TimeWindows[1,5]
+   137 TimeWindows[1,5]
                                  200           200           250 
-   132 TimeWindows[1,6]
+   138 TimeWindows[1,6]
                                  135           135           165 
-   133 TimeWindows[1,0]
-                                   0             0            40 
-   134 TimeWindows[2,1]
+   139 TimeWindows[1,0]
+                                   0             0           300 
+   140 TimeWindows[2,1]
                                   20            20           100 
-   135 TimeWindows[2,2]
+   141 TimeWindows[2,2]
                                   80            80           110 
-   136 TimeWindows[2,3]
+   142 TimeWindows[2,3]
                                   70            70            90 
-   137 TimeWindows[2,4]
+   143 TimeWindows[2,4]
                                  100           100           150 
-   138 TimeWindows[2,5]
+   144 TimeWindows[2,5]
                                  200           200           250 
-   139 TimeWindows[2,6]
+   145 TimeWindows[2,6]
                                  135           135           165 
-   140 TimeWindows[2,0]
-                                   0             0            40 
-   141 TimeWindows[3,1]
+   146 TimeWindows[2,0]
+                                   0             0           300 
+   147 TimeWindows[3,1]
                                   20            20           100 
-   142 TimeWindows[3,2]
+   148 TimeWindows[3,2]
                                   80            80           110 
-   143 TimeWindows[3,3]
+   149 TimeWindows[3,3]
                                   70            70            90 
-   144 TimeWindows[3,4]
+   150 TimeWindows[3,4]
                                  125           100           150 
-   145 TimeWindows[3,5]
+   151 TimeWindows[3,5]
                                  200           200           250 
-   146 TimeWindows[3,6]
+   152 TimeWindows[3,6]
                                  158           135           165 
-   147 TimeWindows[3,0]
-                                   0             0            40 
-   148 Distance                  715                             
+   153 TimeWindows[3,0]
+                                   0             0           300 
+   154 Distance                  715                             
 
    No. Column name       Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
@@ -523,37 +535,37 @@ Objective:  Distance = 715 (MINimum)
                     *              1             0             1 
    109 takeRoute[1,0,1]
                     *              0             0             1 
-   110 takeRoute[1,0,2]
+   110 takeRoute[2,0,1]
+                    *              0             0             1 
+   111 takeRoute[3,0,1]
                     *              1             0             1 
-   111 takeRoute[1,0,3]
-                    *              0             0             1 
-   112 takeRoute[1,0,4]
-                    *              0             0             1 
-   113 takeRoute[1,0,5]
-                    *              0             0             1 
-   114 takeRoute[1,0,6]
-                    *              0             0             1 
-   115 takeRoute[2,0,1]
-                    *              0             0             1 
-   116 takeRoute[2,0,2]
-                    *              0             0             1 
-   117 takeRoute[2,0,3]
+   112 takeRoute[1,0,2]
                     *              1             0             1 
-   118 takeRoute[2,0,4]
+   113 takeRoute[2,0,2]
                     *              0             0             1 
-   119 takeRoute[2,0,5]
+   114 takeRoute[3,0,2]
                     *              0             0             1 
-   120 takeRoute[2,0,6]
+   115 takeRoute[1,0,3]
                     *              0             0             1 
-   121 takeRoute[3,0,1]
+   116 takeRoute[2,0,3]
                     *              1             0             1 
-   122 takeRoute[3,0,2]
+   117 takeRoute[3,0,3]
                     *              0             0             1 
-   123 takeRoute[3,0,3]
+   118 takeRoute[1,0,4]
                     *              0             0             1 
-   124 takeRoute[3,0,4]
+   119 takeRoute[2,0,4]
                     *              0             0             1 
-   125 takeRoute[3,0,5]
+   120 takeRoute[3,0,4]
+                    *              0             0             1 
+   121 takeRoute[1,0,5]
+                    *              0             0             1 
+   122 takeRoute[2,0,5]
+                    *              0             0             1 
+   123 takeRoute[3,0,5]
+                    *              0             0             1 
+   124 takeRoute[1,0,6]
+                    *              0             0             1 
+   125 takeRoute[2,0,6]
                     *              0             0             1 
    126 takeRoute[3,0,6]
                     *              0             0             1 
