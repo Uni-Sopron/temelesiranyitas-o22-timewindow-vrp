@@ -45,14 +45,17 @@ minimize Distance:
 
 solve;
 
+printf 'Szallitasi ido: %d perc \n', Distance;
+
 for{t in Trains}
 {
     printf '%d. Tehervonat \n', t;
     printf '----------- \n';
 
     printf 'Utvonalak: \n';
-    for{n in Nodes, nn in Nodes: takeRoute[t, n, nn]}
+    for{n in Nodes , nn in Nodes: takeRoute[t, n, nn]}
     {
+     
         printf  '%d -> %d  \n', n, nn ;
     }
    printf 'Kiszolgalva\n\n';
