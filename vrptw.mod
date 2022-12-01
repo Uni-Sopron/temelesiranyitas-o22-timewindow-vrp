@@ -1,51 +1,48 @@
 param nWH;
 set Warehouses := 1..nWH;
 set Nodes := Warehouses union {0};
-param demand{Warehouses} >=0;
+param Demand{Warehouses} >=0;
 
 param nTrains;
 set Trains := 1..nTrains;
 
-param capacity{Trains} >=0;
-param M := 99999;
-param distance{Nodes,Nodes} >=0;
-param lower{Nodes} >=0;
-param upper{Nodes} >=0;
-param serving_time{Nodes} >=0;
+param Capacity{Trains} >=0;
+param Distance{Nodes,Nodes} >=0;
+param Lower{Nodes} >=0;
+param Upper{Nodes} >=0;
+param ServingTime{Nodes} >=0;
+param M := sum{n in Nodes, nn in Nodes} Distance[n, nn];
 
-var takeRoute{Trains, Nodes, Nodes} binary;
-var start_service{Trains, Nodes} >=0;
-
-s.t. ServeAllOnlyOnce1{w in Warehouses} :
-    sum{t in Trains, nn in Nodes: w!=nn} takeRoute[t, w, nn] == 1; 
+var TakeRoute{Trains, Nodes, Nodes} binary;
+var StartService{Trains, Nodes} >=0;
 
 s.t. ServeAllOnlyOnce2{w in Warehouses} :
-    sum{t in Trains, nn in Nodes: w!=nn} takeRoute[t, nn, w] == 1; 
+    sum{t in Trains, nn in Nodes: w!=nn} TakeRoute[t, nn, w] == 1; 
 
 s.t. LeaveDepot{t in Trains} :
-    sum{ww in Warehouses} takeRoute[t,0,ww] == 1;
+    sum{ww in Warehouses} TakeRoute[t,0,ww] == 1;
 
 s.t. ArriveAtDepot{t in Trains} : 
-    sum{w in Warehouses} takeRoute[t,w,0] == 1;
+    sum{w in Warehouses} TakeRoute[t,w,0] == 1;
 
 s.t. EnsureFlow{n in Nodes, t in Trains}: 
-    sum{nn in Nodes:n!=nn} takeRoute[t, n,nn] - sum{nn in Nodes:nn !=n} takeRoute[t, nn, n] == 0;
+    sum{nn in Nodes:n!=nn} TakeRoute[t, n,nn] - sum{nn in Nodes:nn !=n} TakeRoute[t, nn, n] == 0;
 
 s.t. CapacityConstraint{t in Trains} :
-    sum{w in Warehouses, n in Nodes: w!=n} takeRoute[t, w, n] * demand[w] <= capacity[t];
+    sum{w in Warehouses, n in Nodes: w!=n} TakeRoute[t, w, n] * Demand[w] <= Capacity[t];
 
 s.t. CalcElapsedTimeWhenRouteTaken{t in Trains, w in Warehouses, ww in Warehouses: w!=ww} :
-    start_service[t,w] + serving_time[w] + distance[w, ww] - start_service[t,ww] <= (1 - takeRoute[t,w,ww]) * M ;
+    StartService[t,w] + ServingTime[w] + Distance[w, ww] - StartService[t,ww] <= (1 - TakeRoute[t,w,ww]) * M ;
 
 s.t. TimeWindows{t in Trains, n in Nodes} :
-      lower[n] <= start_service[t,n] <= upper[n]; 
+      Lower[n] <= StartService[t,n] <= Upper[n]; 
 
-minimize Distance:
-    sum{t in Trains, n in Nodes, nn in Nodes: nn != n} distance[n, nn] * takeRoute[t, n, nn];
+minimize Time:
+    sum{t in Trains, n in Nodes, nn in Nodes: nn != n} Distance[n, nn] * TakeRoute[t, n, nn];
 
 solve;
 
-printf 'Szallitasi ido: %d perc \n', Distance;
+printf 'Szallitasi ido: %d perc \n', Time;
 
 for{t in Trains}
 {
@@ -53,10 +50,11 @@ for{t in Trains}
     printf '----------- \n';
 
     printf 'Utvonalak: \n';
-    for{n in Nodes , nn in Nodes: takeRoute[t, n, nn]}
+    for{i in 0..card(Warehouses)}
     {
-     
-        printf  '%d -> %d  \n', n, nn ;
+        for{j in 0..card(Warehouses): TakeRoute[t, i, j]} {
+            printf  '%d -> %d \n', i, j ;
+        }
     }
    printf 'Kiszolgalva\n\n';
 }

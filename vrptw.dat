@@ -1,7 +1,7 @@
 param nTrains := 3;
 param nWH := 6;
 
-param demand :=
+param Demand :=
 1   20
 2   25
 3   15
@@ -9,14 +9,12 @@ param demand :=
 5   35
 6   40;
 
-
-param capacity :=
+param Capacity :=
 1   40
 2   50
 3   100;
 
-
-param distance :
+param Distance :
 	0	1	2	3	4	5	6:=
 0	0	40	60	100	145	80	210
 1	40	0	130	150	95	110	90
@@ -26,8 +24,7 @@ param distance :
 5	80	110	145	45	60	0	125
 6	210	90	115	35	25	125	0;
 
-
-param lower:=
+param Lower:=
 0	0
 1   20
 2   80
@@ -36,7 +33,7 @@ param lower:=
 5   200
 6   135;
 
-param upper:=
+param Upper:=
 0	300
 1   100
 2   110
@@ -45,7 +42,7 @@ param upper:=
 5   250
 6   165;    
 
-param serving_time :=
+param ServingTime :=
 0	0
 1	10
 2	6
