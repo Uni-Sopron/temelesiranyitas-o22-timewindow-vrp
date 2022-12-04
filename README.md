@@ -15,7 +15,7 @@ A kérdés az, hogy hogyan ütemezzük a raktárak sorrendjét, úgy hogy mindeg
 - Adott számú tehervonattal rendelkezik a vasúti társaságunk, eltérő kapacitással
 - Adott a depónk pozíciója
 - Adott számú áruházláncok raktáraiba kell eljuttatnunk termékeket, minden áruház más-más követelést támaszt
-- Adott az csomópontok (raktárak) közötti távolság percben
+- Adott az csomópontok (raktárak) közötti távolság percben (időmátrix)
 - A raktárakat bizonyos időablakokban kell kiszolgálnunk
 - A raktárak kiszolgálása időt vesz igénybe
 - Fontos, hogy a tehervonataink a depóba érkezzenek vissza
