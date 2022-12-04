@@ -21,8 +21,14 @@ A kérdés az, hogy hogyan ütemezzük a raktárak sorrendjét, úgy hogy mindeg
 - Fontos, hogy a tehervonataink a depóba érkezzenek vissza
 
 ## Döntési változók
-- Adott tehervonat megtesz egy utat egy pontból a másikba `var TakeRoute{Trains, Nodes, Nodes} binary;`
-- Tehervonat elkezdi a raktár kiszolgálását egy adott percben  `var StartService{Trains, Nodes} >=0;`
+- Adott tehervonat megtesz egy utat egy pontból a másikba
+```ampl
+var TakeRoute{Trains, Nodes, Nodes} binary;
+```
+- Tehervonat elkezdi a raktár kiszolgálását egy adott percben 
+```ampl 
+var StartService{Trains, Nodes} >=0;
+```
 
 ## Kimenet
 ```
