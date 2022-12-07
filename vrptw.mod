@@ -15,8 +15,8 @@ param M := sum{n in Nodes, nn in Nodes} Distance[n, nn];
 
 var TakeRoute{Trains, Nodes, Nodes} binary;
 var StartService{Trains, Nodes} >=0;
-
-s.t. ServeAllOnlyOnce2{w in Warehouses} :
+     
+s.t. ServeAllOnlyOnce{w in Warehouses} :
     sum{t in Trains, nn in Nodes: w!=nn} TakeRoute[t, nn, w] == 1; 
 
 s.t. LeaveDepot{t in Trains} :
@@ -44,7 +44,7 @@ solve;
 
 printf 'Szallitasi ido: %d perc \n', Time;
 
-for{t in Trains}
+/*for{t in Trains}
 {
     printf '%d. Tehervonat \n', t;
     printf '----------- \n';
@@ -54,9 +54,23 @@ for{t in Trains}
     {
         for{j in 0..card(Warehouses): TakeRoute[t, i, j]} {
             printf  '%d -> %d \n', i, j ;
-        }
+        }        
     }
    printf 'Kiszolgalva\n\n';
-}
 
+}*/
+for{t in Trains}
+{
+    printf '%d. Tehervonat \n', t;
+    printf '----------- \n';
+
+    printf 'Utvonalak: \n';
+    printf '0 -> ';
+
+    for{n in Nodes, nn in Nodes : TakeRoute[t, n, nn]} {
+            printf  '%d -> %d \n', n;
+        }        
+    
+   printf 'Kiszolgalva\n\n';
+}
 end;
