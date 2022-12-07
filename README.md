@@ -36,26 +36,17 @@ Szallitasi ido: 715 perc
 1. Tehervonat 
 ----------- 
 Utvonalak: 
-0 -> 2 
-2 -> 0 
-Kiszolgalva
+0 -> 2 -> 0 -> Kiszolgalva
 
 2. Tehervonat 
 ----------- 
 Utvonalak: 
-0 -> 3 
-3 -> 5 
-5 -> 0 
-Kiszolgalva
+0 -> 3 -> 5 -> 0 -> Kiszolgalva
 
 3. Tehervonat 
 ----------- 
 Utvonalak: 
-0 -> 1 
-1 -> 4 
-4 -> 6 
-6 -> 0 
-Kiszolgalva
+0 -> 1 -> 4 -> 6 -> 0 -> Kiszolgalva
 ```
 
 ## Referenciák
